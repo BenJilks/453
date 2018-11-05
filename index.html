@@ -11,19 +11,14 @@
 
     <script>
 
-        var deadline = new Date(2018,11,14);
+        var deadline = new Date(2018, 11, 14, 9);
         var timeDiv = document.getElementById("TimeLeft");
 
         function Countdown()
         {
             var currentDate = new Date();
             
-            milliseconds = (deadline.getTime() - currentDate.getTime()) / 1000;
-            // seconds.innerHTML = Math.floor(milliseconds/1000).toFixed(0);
-            // minutes.innerHTML = Math.floor(milliseconds/60000).toFixed(0);
-            // hours.innerHTML = Math.floor(milliseconds/3600000).toFixed(0);
-            // days.innerHTML = Math.floor(milliseconds/86400000).toFixed(0);
-
+            let milliseconds = (deadline.getTime() - currentDate.getTime()) / 1000;
             let days = Math.floor(milliseconds / 86400);
             milliseconds -= days * 86400;
             let hours = Math.floor(milliseconds / 3600) % 24;
